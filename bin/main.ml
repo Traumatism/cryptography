@@ -1,13 +1,13 @@
 let cesar str shift =
   let shift = shift mod 26 in
-  let shift_char c =
-    if 'a' <= c && c <= 'z' then
+  let shift_char chr =
+    if 'a' <= chr && chr <= 'z' then
       char_of_int
-        (int_of_char 'a' + ((int_of_char c - int_of_char 'a' + shift) mod 26))
-    else if 'A' <= c && c <= 'Z' then
+        (int_of_char 'a' + ((int_of_char chr - int_of_char 'a' + shift) mod 26))
+    else if 'A' <= chr && chr <= 'Z' then
       char_of_int
-        (int_of_char 'A' + ((int_of_char c - int_of_char 'A' + shift) mod 26))
-    else c (* Not a number *)
+        (int_of_char 'A' + ((int_of_char chr - int_of_char 'A' + shift) mod 26))
+    else chr (* Not a number *)
   in
   String.map shift_char str
 
