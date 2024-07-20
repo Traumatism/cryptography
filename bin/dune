@@ -1,0 +1,4 @@
+(executable
+ (public_name cryptography)
+ (name main)
+ (libraries cryptography))
