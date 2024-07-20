@@ -21,4 +21,4 @@ let cesar str shift =
   in
   String.map shift_char str
 
-let cesar_inv str shift = cesar str (-shift)
+let cesar_rev str shift = cesar str (-shift)
